@@ -92,3 +92,93 @@ Swal.fire({
     title: "respuesta:",
     html: respuesta,
 });
+
+//operadore logicos y estructuras condicionales (inverse, )
+
+//AND && con if
+var bool = false;
+var numeric = "7";
+if(!bool && numeric === "7"){
+    console.log("Entra if")
+}
+else{
+    console.log("Entra else")
+}
+
+//OT || CON IF 
+
+var age = 31;
+
+if(age == 32 || numeric === 7){
+    console.log("Entra if")
+    age+=2;
+}
+else {
+    console.log("Entra else")
+    age-=2;
+}
+
+// For 
+console.log(array_tex.length);
+
+for(let i=0; i<7; i++){
+    console.log(array_tex[i]+(i+1))
+}
+
+//----while
+// let position = 0;
+// while(position < array_tex.length){
+//     console.log(array_tex[position]+(position+1))
+//     position++;
+// }
+
+// ---- do while 
+//let w = 0;
+// do{
+//      console.log(array_tex[w]+(w+1));
+//     w++;
+//  }
+//  while(array_tex.length);
+
+// eventos y funciones
+function load_page(){
+    //ejm();
+}
+
+function ejm(){
+    alert("Bienvenidox2")
+}
+
+function box_onblur(){
+    const box_onblur = document.querySelector("#box_onblur");
+    if(box_onblur.value.length <=2 ){
+        alert("Problemas en el texto");
+    }
+}
+
+const btn_changeColor = document.querySelector("#change_color");
+btn_changeColor.addEventListener("click", () => {
+
+    document.body.style.backgroundColor = "red";
+    document.body.style.color = "#fff";
+});
+
+const form = document.getElementById("form_register");
+const nombre = document.getElementById("nombres");
+const apellidos = document.getElementById("apellidos");
+const validation = document.getElementById("validacion");
+
+form.addEventListener("submit",name_event => {
+    name_event.preventDefault();
+    let info = "";
+    if(nombres.value.length <= 2 || apellidos.value.length <= 2){
+        info += "nombre y apellidos incorrectos"
+        validation.style.color = "red";
+
+    }
+    else{
+        info += "su nombre =" + nombre.value + "" + apellidos;
+        validation.style.color = "green";
+    }
+    validation.innerText = info;
+});

@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="load_page()">
     <label for="" id="box_one"></label>
     <label for="" id="box_two"></label>
+    <br>
+    <input type="text" id="box_onblur" onblur="box_onblur()" placeholder="ejemplo onblur" size="30">
+
+    <form id="form_register">
+        <label for="nombres">nombres</label>
+        <input type="text" id="nombres" size="30" placeholder="escribir nombre">
+        <br>
+        <label for="apellidos">apellidos</label>
+        <input type="text" id="apellidos" size="30" placeholder="escribir apellidos">
+        <br>
+        <button id="submit">REGISTRAR</button>
+        <button id="reset">RESETEAR</button>
+         
+        <label id="validation"></label>
+    </form>
+
+    <button id="change_color">
+        cambiar color
+    </button>
     
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -17,5 +36,7 @@
         // alert("Daniel Miranda")
         console.log("Bienvenidos");
     </script>
+
+
 </body>
 </html>
