@@ -98,10 +98,10 @@ Swal.fire({
 //AND && con if
 var bool = false;
 var numeric = "7";
-if(!bool && numeric === "7"){
+if (!bool && numeric === "7") {
     console.log("Entra if")
 }
-else{
+else {
     console.log("Entra else")
 }
 
@@ -109,20 +109,20 @@ else{
 
 var age = 31;
 
-if(age == 32 || numeric === 7){
+if (age == 32 || numeric === 7) {
     console.log("Entra if")
-    age+=2;
+    age += 2;
 }
 else {
     console.log("Entra else")
-    age-=2;
+    age -= 2;
 }
 
 // For 
 console.log(array_tex.length);
 
-for(let i=0; i<7; i++){
-    console.log(array_tex[i]+(i+1))
+for (let i = 0; i < 7; i++) {
+    console.log(array_tex[i] + (i + 1))
 }
 
 //----while
@@ -141,17 +141,17 @@ for(let i=0; i<7; i++){
 //  while(array_tex.length);
 
 // eventos y funciones
-function load_page(){
-    //ejm();
-}
+// function load_page() {
+//     //ejm();
+// }
 
-function ejm(){
+function ejm() {
     alert("Bienvenidox2")
 }
 
-function box_onblur(){
+function box_onblur() {
     const box_onblur = document.querySelector("#box_onblur");
-    if(box_onblur.value.length <=2 ){
+    if (box_onblur.value.length <= 2) {
         alert("Problemas en el texto");
     }
 }
@@ -168,17 +168,38 @@ const nombre = document.getElementById("nombres");
 const apellidos = document.getElementById("apellidos");
 const validation = document.getElementById("validacion");
 
-form.addEventListener("submit",name_event => {
+form.addEventListener("submit", name_event => {
     name_event.preventDefault();
     let info = "";
-    if(nombres.value.length <= 2 || apellidos.value.length <= 2){
+    if (nombres.value.length <= 2 || apellidos.value.length <= 2) {
         info += "nombre y apellidos incorrectos"
         validation.style.color = "red";
 
     }
-    else{
+    else {
         info += "su nombre =" + nombre.value + "" + apellidos;
         validation.style.color = "green";
     }
     validation.innerText = info;
 });
+
+function load_page() {
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
+    console.log(date.getFullYear());
+    for (let i = 0; i < array_mul.length; i++) {
+        console.log(array_mul[i].name);
+    }
+}
+
+function validate() {
+    let nombres = document.getElementById("nombres").value;
+    console.log(nombres);
+    alert(nombres.split(" "));
+    if (nombres.length > 2) {
+        document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus();
+        document.getElementById("nombres").value = "";
+    }
+}
