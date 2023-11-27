@@ -2,14 +2,14 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #fbfee8;
 }
 
 :root{
     --padding-container: 100px 0;
-    --color-title: #001a49;
+    --color-title: #725511;
 }
 
-/* front page */
 
 .container{
     width: 90%;
@@ -27,7 +27,7 @@ body{
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
-    color: #fff;
+    color: #fbfee8;
 }
 
 .person::before{
@@ -37,7 +37,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../img/wilderduarte_frontpage.jpg');
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../img/fondo.jpg');
     background-size: cover;
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     z-index: -1;
@@ -69,7 +69,7 @@ body{
 }
 
 .nav_links{
-    color: #fff;
+    color: #fbfee8;
     text-decoration: none;
 }
 
@@ -88,7 +88,16 @@ body{
     display: var(--show, none);
 }
 
-/* person container */
+.btn{
+    display: inline-block;
+    background-color: #ece806;
+    justify-self: center;
+    color: #a38605;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 32px;
+}
+
 
 .person_container{
     max-width: 800px;
@@ -108,18 +117,6 @@ body{
 .person_paragraph{
     margin-bottom: 20px;
 }
-
-.btn{
-    display: inline-block;
-    background-color: #2091f9;
-    justify-self: center;
-    color: #fff;
-    text-decoration: none;
-    padding: 13px 30px;
-    border-radius: 32px;
-}
-
-/* about */
 
 .about{
     text-align: center;
@@ -157,12 +154,9 @@ body{
 .about_icon{
     width: 40px;
 }
-
-/* options */
-
 .options{
-    background-color: #e5e5f7;
-    background-image: linear-gradient(#444cf7 0.5px, transparente 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-color: #ece806;
+    background-image: linear-gradient(#d0f744 0.5px, transparente 0.5px), radial-gradient(#d0f744 0.5px, #e5e5f7 0.5px);
     background-size: cover;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
@@ -177,6 +171,7 @@ body{
 
 .options_picture{
     max-width: 500px;
+
 }
 
 .options_paragraph{
@@ -187,140 +182,14 @@ body{
 .options_img{
     width: 100%;
     display: block;
-}
-
-/* testimonys */
-
-.testimony{
-    background-color: #ffffff;
-}
-
-.testimony_container{
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap: 1em;
-    align-items: center;
-}
-
-.testimony_body{
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.testimony_body--show{
-    pointer-events: unset;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.testimony_img{
-    width: 250px;
-    height: 250px;
     border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 30%;
 }
 
-.testimony_texts{
-    max-width: 700px;
-}
-
-.testimony_course{
-    background-color: royalblue;
-    color: #fff;
-    display: inline-block;
-    padding: 5px;
-}
-
-.testimony_arrow{
-    width: 90%;
-    cursor: pointer;
-}
-
-/* Questions */
-
-.questions{
-    text-align: center;
-    background-color: #e5e5f7;
-}
-
-.questions_container{
-    display: grid;
-    gap: 2em;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-.questions_padding{
-    padding: 0;
-    transition: padding .3s;
-    border: 1px solid #5454D4;
-    border-radius: 6px;
-}
-
-.questions_padding--add{
-    padding-bottom: 30px;
-}
-
-.questions_answer{
-    padding: 0 30px 0;
-    overflow: hidden;
-}
-
-.questions_title{
-    text-align: left;
-    display: flex;
-    font-size: 20px;
-    padding: 30px 0 30px;
-    cursor: pointer;
-    color: var(--color-title);
-    justify-content: space-between;
-}
-
-.questions_arrow{
-    border-radius: 50%;
-    background-color: var(--color-title);
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    margin-left: 10px;
-    transition:  transform .3s;
-}
-
-.questions_arrow--rotate{
-    transform: rotate(180deg);
-}
-
-.questions_show{
-    text-align: left;
-    height: 0;
-    transition: height .3s;
-}
-
-.questions_img{
-    display: block;
-}
-
-.questions_copy{
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
 
 /* footer */
 
 .footer {
-    background-color: #1d293f;
+    background-color: #a38605;
 }
 
 .footer_title{
@@ -330,14 +199,14 @@ body{
 }
 
 .footer_title, .footer_info{
-    color: #fff;
+    color: #725511;
 }
 
 .footer_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #725511;
     padding-bottom: 60px;
 }
 
@@ -363,7 +232,7 @@ body{
 }
 
 .footer_input{
-    background-color: #fff;
+    background-color: #725511;
     height: 50px;
     display: block;
     padding-left: 10px;
@@ -379,10 +248,10 @@ body{
     display: inline-block;
     height: 50px;
     padding: 0 20px;
-    background-color: #2091f9;
+    background-color: #725511;
     border: none;
     font-size: 1rem;
-    color: #fff;
+    color: #725511;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -390,7 +259,7 @@ body{
 .footer_copy{
     --padding-container: 30px 0;
     text-align: center;
-    color: #fff;
+    color: #725511;
 }
 
 .footer_copyright{
